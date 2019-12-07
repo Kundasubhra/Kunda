@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <conio.h>
+#include <string.h>
+#include <math.h>
+void main()
+{
+    int i,sum = 0;
+    char bin[30];
+    printf("enter the binary number:");
+    scanf("%s", bin);
+    
+    for(i=strlen(bin)-1;i>=0;i--)
+    {
+        sum = sum + (bin[i]-'0')*pow(2,i);
+    }
+    printf("%d",sum);
+}
