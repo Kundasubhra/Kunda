@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <conio.h>
+#include <string.h>
+#include <math.h>
+void main()
+{
+    int i=0, dec,x;
+    char hex[20];
+    printf("enter the decimal number:");
+    scanf("%d", &dec);  
+    while(dec>0)
+    {
+        x=dec%16;
+        dec=dec/16;
+    
+    switch(x)
+    {
+        case 10 : hex[i] = 'A';
+        break;
+        case 11 : hex[i] = 'B';
+        break;
+        case 12 : hex[i] = 'C';
+        break;
+        case 13 : hex[i] = 'D';
+        break;
+        case 14 : hex[i] = 'E';
+        break;
+        case 15 : hex[i] = 'F';
+        break;
+        default : hex[i] = x +'0';
+        break;
+    }
+    i++;
+    }
+    hex[i]=0;
+    for(x=strlen(hex)-1; x>=0; x--)
+        printf("%c",hex[x]);
+}
