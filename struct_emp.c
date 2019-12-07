@@ -51,5 +51,4 @@ void main()
             printf("%s,%d,%lf", x[i].name, x[i].age, x[i].salary);
         }
         getch();
-}
     
